@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: observability
+
+management:
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http_server_requests: true
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+  endpoint:
+    prometheus:
+      access: unrestricted
