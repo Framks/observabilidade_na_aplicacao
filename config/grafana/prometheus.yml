@@ -5,5 +5,4 @@ scrape_configs:
   - job_name: "spring-todo"
     metrics_path: "/actuator/prometheus"
     static_configs:
-      #- targets: ["host.docker.internal:8080"]  # Windows/Mac
-      - targets: ["172.17.0.1:8080"]        # Linux (gateway docker)
+      - targets: ["172.17.0.1:9090"]
